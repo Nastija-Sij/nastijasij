@@ -1,0 +1,124 @@
+:root {
+  --primary-color: #06141b;
+  --secondary-color: #11212d;
+  --light-color: #253745;
+  --pop-color: #4a5c6a;
+  --light-blue: #9ba8ab;
+  --text-color: #ccd0cf;
+  --font-family-head: "Bluu", sans-serif;
+  --font-family-body: "Inter", sans-serif;
+  --background-gradient: linear-gradient(0deg, #4a5c6a 20%, #06141b 90%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--background-gradient);
+  overflow-x: hidden;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+h1 {
+  font-family: var(--font-family-body);
+  font-weight: 200;
+  font-size: 60px;
+  color: var(--light-blue);
+  margin-bottom: 1rem;
+}
+h2 {
+  font-family: var(--font-family-head);
+  font-size: 40px;
+  color: var(--text-color);
+  margin: 20px auto 50px auto;
+}
+h3 {
+  font-family: var(--font-family-head);
+  font-size: 30px;
+  color: var(--pop-color);
+
+  margin: 15px auto 15px auto;
+}
+h4 {
+  font-family: var(--font-family-head);
+  font-weight: 500;
+  color: var(--light-blue);
+  margin-bottom: 26px;
+}
+p {
+  font-family: var(--font-family-body);
+  font-weight: 250;
+  font-size: 16px;
+  color: var(--text-color);
+  text-align: left;
+  margin: 10px auto 10px auto;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 30px;
+}
+footer {
+  margin: 20px auto 0 auto;
+  text-align: center;
+  font-family: var(--font-family-body);
+  font-size: 14px;
+  color: var(--light-color);
+  background-color: var(--pop-color);
+  padding: 10px 0 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.layout-wrapper {
+  margin: 200px 30px 0 30px;
+  max-width: 1200px;
+  display: flex;
+  height: 100vh;
+}
+
+.header {
+  position: fixed;
+  overflow: hidden;
+  height: 100%;
+  width: 350px;
+  position: fixed;
+}
+.nav-text {
+  color: var(--light-blue);
+}
+.nav-indicator {
+  background-color: var(--light-blue);
+  width: 2rem;
+  height: 1px;
+  transition: width 0.3s ease;
+}
+.nav-link-style:hover .nav-indicator {
+  width: 3rem;
+}
+.nav-link-style {
+  display: flex;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: var(--light-blue);
+  text-transform: uppercase;
+  font-weight: 300;
+  text-decoration: none;
+  transition: width 0.3s ease;
+}
+
+.nav-link-style.active {
+  color: var(--text-color);
+  font-weight: 900;
+}
+.main-content {
+  margin-left: 350px; /* same as sidebar width */
+  flex: 1;
+  overflow-y: auto;
+  padding-left: 20px;
+  height: 100vh;
+}
