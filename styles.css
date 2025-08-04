@@ -37,9 +37,8 @@ h2 {
 }
 h3 {
   font-family: var(--font-family-head);
-  font-size: 30px;
+  font-size: 34px;
   color: var(--pop-color);
-
   margin: 15px auto 15px auto;
 }
 h4 {
@@ -48,6 +47,10 @@ h4 {
   color: var(--light-blue);
   margin-bottom: 26px;
 }
+h5 {
+    color: var(--light-blue)
+}
+
 p {
   font-family: var(--font-family-body);
   font-weight: 250;
@@ -74,9 +77,11 @@ footer {
   width: 100%;
 }
 .layout-wrapper {
-  margin: 200px 30px 0 30px;
+  margin: 200px auto 0 auto;
+
   max-width: 1200px;
   display: flex;
+
   height: 100vh;
 }
 
@@ -111,14 +116,52 @@ footer {
   transition: width 0.3s ease;
 }
 
-.nav-link-style.active {
+.nav-link-style .nav-indicator {
+  background-color: var(--light-blue);
+  width: 2rem;
+  height: 1px;
+  transition: width 0.3s ease;
+}
+.nav-link-style.active{
+    font-weight: 600;
+    color:green;
+}
+.nav-link-style.active .nav-indicator {
+  width: 3.5rem;
+  background-color: var(--text-color); 
+}
+.nav-link-style.active .nav-text {
+  font-weight: 600;
   color: var(--text-color);
-  font-weight: 900;
 }
 .main-content {
-  margin-left: 350px; /* same as sidebar width */
+  margin-left: 350px; 
   flex: 1;
   overflow-y: auto;
   padding-left: 20px;
   height: 100vh;
+}
+.project-link {
+  border-radius: 12px;
+  padding: 15px;
+  text-decoration: none;
+  
+}
+.project-link:hover {
+  background-color: var(--pop-color);
+}
+
+.project-link:hover h5{
+    transition: 0.3s ease-in-out;
+    transform-origin: left bottom;
+    scale: 1.07;
+}
+.sftw-bbl {
+    background-color: var(--pop-color);
+     border-radius: 12px;;
+    padding: 2px 6px;
+    text-align: center;
+    min-width: 40px;
+    display: inline-block;
+    color: var(--light-color)
 }
